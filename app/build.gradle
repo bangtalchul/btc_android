@@ -32,7 +32,8 @@ android {
 }
 
 dependencies {
-
+    // implementation 'com.google.firebase:firebase-auth:19.0.0'
+    implementation "com.google.android.gms:play-services-auth:20.1.0" // 구글 로그인 API
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
