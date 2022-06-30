@@ -21,14 +21,14 @@ import com.bnk.bangtalchul.viewmodel.HomeViewModel
  */
 class HomeFragment : Fragment() {
 
-    private val viewModel: HomeViewModel by viewModels()
+    // private val viewModel: HomeViewModel by viewModels()
 
     companion object {
         fun newInstance() = HomeFragment()
     }
 
     private lateinit var binding: FragmentHomeBinding
-    // private lateinit var viewModel: HomeViewModel
+    private lateinit var viewModel: HomeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
             container,
             false
         )
-        // viewModel = HomeViewModel()
+
         viewModel.getData()
         binding.textview.text = viewModel.data.value
         return binding.root

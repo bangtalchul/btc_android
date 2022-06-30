@@ -10,7 +10,7 @@ class HomeRepository {
 //
 //    private val data:ArrayList<HashMap<String, String>> = arrayListOf<HashMap<String, String>>(a1, a2, a3, a4, a5)
 
-    private val data: String = "비트포비아"
+    private val data: String = "윤수빈"
 
     fun getData(): String {
         return data
