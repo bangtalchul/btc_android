@@ -3,7 +3,7 @@ package com.bnk.bangtalchul.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.bnk.bangtalchul.view.repository.HomeRepository
+import com.bnk.bangtalchul.model.repository.HomeRepository
 
 class HomeViewModel : ViewModel() {
 

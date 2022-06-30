@@ -1,4 +1,4 @@
-package com.bnk.bangtalchul.view.repository
+package com.bnk.bangtalchul.model.repository
 
 class HomeRepository {
 
