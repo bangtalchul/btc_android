@@ -1,19 +1,19 @@
 package com.bnk.bangtalchul.model.repository
 
+import com.bnk.bangtalchul.model.entity.HomeEntity
+
 class HomeRepository {
+    var cafe = HomeEntity(0, "", "", "")
 
-//    var a1: HashMap<String, String> = hashMapOf("title" to "비트포비아 서면", "juso" to "부산광역시", "url" to "store1")
-//    var a2: HashMap<String, String> = hashMapOf("title" to "비트포비아 서면", "juso" to "부산광역시", "url" to "store2")
-//    var a3: HashMap<String, String> = hashMapOf("title" to "비트포비아 서면", "juso" to "부산광역시", "url" to "store3")
-//    var a4: HashMap<String, String> = hashMapOf("title" to "비트포비아 서면", "juso" to "부산광역시", "url" to "store4")
-//    var a5: HashMap<String, String> = hashMapOf("title" to "비트포비아 서면", "juso" to "부산광역시", "url" to "store5")
-//
-//    private val data:ArrayList<HashMap<String, String>> = arrayListOf<HashMap<String, String>>(a1, a2, a3, a4, a5)
+    private val cafeList :ArrayList<HomeEntity> = arrayListOf(
+        HomeEntity(1, "비트포비아1", "부산광역시", "store1"),
+        HomeEntity(2, "비트포비아2", "부산광역시", "store2"),
+        HomeEntity(3, "비트포비아3", "부산광역시", "store3"),
+        HomeEntity(4, "비트포비아4", "부산광역시", "store4"),
+        HomeEntity(5, "비트포비아5", "부산광역시", "store5")
+    )
 
-    private val data: String = "윤수빈"
-
-    fun getData(): String {
-        return data
+    fun getList(): ArrayList<HomeEntity> {
+        return cafeList
     }
-
 }
