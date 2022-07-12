@@ -1,8 +1,10 @@
 package com.bnk.bangtalchul.view.adapter
 
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bnk.bangtalchul.R
@@ -32,12 +34,11 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         private val name = itemView.findViewById<TextView>(R.id.name)
         private val address = itemView.findViewById<TextView>(R.id.address)
-        //private val photoUrl = itemView.findViewById<TextView>(R.id.photo_url)
+        private val photoUrl = itemView.findViewById<ImageView>(R.id.photo_url)
 
         fun bind(home: HomeEntity) {
             name.text = home.name
             address.text = home.address
-            //photoUrl.text = home.photoUrl
 
 //            itemView.setOnClickListener {
 //                homeItemClick(home)
