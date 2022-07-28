@@ -20,7 +20,7 @@ class MyPageFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_community, container, false)
+        return inflater.inflate(R.layout.fragment_mypage, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

@@ -2,6 +2,14 @@
     <string name="app_name">bangtalchul</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- My Page Link -->
+    <string name="my_history">Hello blank fragment</string>
+    <string name="my_2">Hello blank fragment</string>
+    <string name="my_3">Hello blank fragment</string>
 </resources>

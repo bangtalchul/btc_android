@@ -4,4 +4,11 @@
     <dimen name="title_image_width">50dp</dimen>
     <dimen name="alert_button_height">50dp</dimen>
     <dimen name="main_layout_bottom_padding">56dp</dimen>
+
+    <dimen name="mypage_profile_image">200dp</dimen>
+    <dimen name="mypage_left_margin">20dp</dimen>
+    <dimen name="mypage_right_margin">20dp</dimen>
+    <dimen name="mypage_bottom_margin">20dp</dimen>
+    <dimen name="mypage_padding">10dp</dimen>
+
 </resources>
