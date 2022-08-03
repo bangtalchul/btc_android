@@ -1,131 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.fragment.MyPageFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <ScrollView
+    <data>
+        <variable
+            name="viewModel"
+            type="com.bnk.bangtalchul.viewmodel.MyPageViewModel" />
+    </data>
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".view.fragment.MyPageFragment">
 
-        <LinearLayout
+        <!-- TODO: Update blank fragment layout -->
+<!--        <Button-->
+<!--            android:id="@+id/button"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@{viewModel.buttonText}"-->
+<!--            android:onClick="@{()->viewModel.onButtonClick()}" />-->
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="@dimen/mypage_left_margin"
-            android:layout_marginRight="@dimen/mypage_right_margin"
-            android:padding="@dimen/mypage_padding"
-            android:gravity="center">
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/circle"
-                android:layout_width="@dimen/mypage_profile_image"
-                android:layout_height="@dimen/mypage_profile_image"
-                android:layout_margin="10dp"
-                android:scaleType="centerCrop"
-                android:layout_marginBottom="@dimen/mypage_bottom_margin"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearanceOverlay="@style/circle"
-                app:srcCompat="@drawable/default_profile_img" />
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginBottom="@dimen/mypage_bottom_margin"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/mypage_padding"
+                android:gravity="center">
 
-                <TextView
-                    android:id="@+id/user_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="이름"
-                    style="@style/mypage_text"/>
-
-                <TextView
-                    android:id="@+id/user_name_filed"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="홍길동"
-                    style="@style/mypage_text"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/mypage_bottom_margin"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/user_nickname"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="닉네임"
-                    style="@style/mypage_text"/>
-
-                <TextView
-                    android:id="@+id/user_nickname_filed"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="아버지라 부르지못하고"
-                    style="@style/mypage_text"/>
-
-            </LinearLayout>
-<!--https://apt-info.github.io/%EA%B0%9C%EB%B0%9C/android-layout-click/-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginBottom="@dimen/mypage_bottom_margin"
-                android:orientation="vertical">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/circle"
+                    android:layout_width="@dimen/mypage_profile_image"
+                    android:layout_height="@dimen/mypage_profile_image"
+                    android:layout_margin="10dp"
+                    android:scaleType="centerCrop"
                     android:layout_marginBottom="@dimen/mypage_bottom_margin"
-                    android:background="@color/main_yellow"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/circle"
+                    app:srcCompat="@drawable/default_profile_img" />
 
-                <TextView
-                    android:id="@+id/mypage_list_item1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/my_history"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginBottom="@dimen/mypage_bottom_margin"
-                android:orientation="vertical">
-
-                <View
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/mypage_left_margin"
+                    android:layout_marginRight="@dimen/mypage_right_margin"
+                    android:layout_weight="1"
                     android:layout_marginBottom="@dimen/mypage_bottom_margin"
-                    android:background="@color/main_yellow"/>
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/mypage_list_item2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/my_history"/>
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="이름"
+                        style="@style/mypage_text"/>
+
+                    <TextView
+                        android:id="@+id/user_name_filed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@{viewModel.getUser().name}"
+                        style="@style/mypage_text"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/mypage_left_margin"
+                    android:layout_marginRight="@dimen/mypage_right_margin"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/mypage_bottom_margin"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/user_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="닉네임"
+                        style="@style/mypage_text"/>
+
+                    <TextView
+                        android:id="@+id/user_nickname_filed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@{viewModel.getUser().nickname}"
+                        style="@style/mypage_text"/>
+
+                </LinearLayout>
+    <!--https://apt-info.github.io/%EA%B0%9C%EB%B0%9C/android-layout-click/-->
+                <LinearLayout
+                    android:id="@+id/written"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/mypage_top_margin"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/mypage_bottom_margin"
+                    android:orientation="vertical"
+                    android:onClick="@{() -> viewModel.goWrittenPage()}">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="@dimen/mypage_bottom_margin"
+                        android:background="@color/main_yellow"/>
+
+                    <TextView
+                        android:id="@+id/mypage_list_item1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/mypage_left_margin"
+                        android:layout_marginRight="@dimen/mypage_right_margin"
+                        android:text="@string/my_written_history"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/reservation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/mypage_bottom_margin"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="@dimen/mypage_bottom_margin"
+                        android:background="@color/main_yellow"/>
+
+                    <TextView
+                        android:id="@+id/mypage_list_item2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/mypage_left_margin"
+                        android:layout_marginRight="@dimen/mypage_right_margin"
+                        android:text="@string/my_reservation_history"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/usage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/mypage_bottom_margin"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="@dimen/mypage_bottom_margin"
+                        android:background="@color/main_yellow"/>
+
+                    <TextView
+                        android:id="@+id/mypage_list_item3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/mypage_left_margin"
+                        android:layout_marginRight="@dimen/mypage_right_margin"
+                        android:text="@string/my_recent_usage"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/collection"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/mypage_bottom_margin"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="@dimen/mypage_bottom_margin"
+                        android:background="@color/main_yellow"/>
+
+                    <TextView
+                        android:id="@+id/mypage_list_item4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/mypage_left_margin"
+                        android:layout_marginRight="@dimen/mypage_right_margin"
+                        android:text="@string/my_collection"/>
+                </LinearLayout>
+
+
+
             </LinearLayout>
 
 
+        </ScrollView>
 
-        </LinearLayout>
-
-
-    </ScrollView>
-
-</FrameLayout>
+    </FrameLayout>
+</layout>

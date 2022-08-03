@@ -33,7 +33,8 @@ android {
     dataBinding {
         enabled = true
     }
-    buildFeatures {
+    buildFeatures{
+        dataBinding = true
         viewBinding true
     }
 }
@@ -56,5 +57,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     // material ui
     runtimeOnly("com.google.android.material:material:1.6.0")
+    // using view model on fragment
+    implementation "androidx.fragment:fragment-ktx:1.4.1"
 
 }
