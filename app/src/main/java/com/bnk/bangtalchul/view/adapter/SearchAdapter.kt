@@ -8,18 +8,18 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bnk.bangtalchul.R
-import com.bnk.bangtalchul.model.entity.HomeEntity
+import com.bnk.bangtalchul.model.entity.SearchEntity
 
-class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
-    private var list: ArrayList<HomeEntity> = arrayListOf()
+class SearchAdapter : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
+    private var list: ArrayList<SearchEntity> = arrayListOf()
 
-    fun setList(cafeList: ArrayList<HomeEntity>) {
+    fun setList(cafeList: ArrayList<SearchEntity>) {
         this.list = cafeList
         notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, i: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.main_cardview, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.search_cardview, parent, false)
         return ViewHolder(view)
     }
 
@@ -36,7 +36,7 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
         private val address = itemView.findViewById<TextView>(R.id.address)
         // private val photoUrl = itemView.findViewById<ImageView>(R.id.photo_url)
 
-        fun bind(home: HomeEntity) {
+        fun bind(home: SearchEntity) {
             name.text = home.name
             address.text = home.address
 

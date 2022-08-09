@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.ArrayAdapter.createFromResource
+import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,8 +21,6 @@ import com.bnk.bangtalchul.viewmodel.HomeViewModel
  */
 class HomeFragment : Fragment() {
 
-    // private val viewModel: HomeViewModel by viewModels()
-
     companion object {
         fun newInstance() = HomeFragment()
     }
@@ -29,6 +30,7 @@ class HomeFragment : Fragment() {
 
     private var linearLayoutManager: RecyclerView.LayoutManager? = null
     private lateinit var recyclerAdapter: HomeAdapter
+    private lateinit var recyclerAdapter2: HomeAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,11 +40,21 @@ class HomeFragment : Fragment() {
         val recyclerView: RecyclerView = view.findViewById(R.id.mainRecyclerView)
         viewModel = HomeViewModel()
         recyclerAdapter = HomeAdapter()
-        recyclerAdapter.setCafeList(viewModel.getList())
+        recyclerAdapter.setList(viewModel.getList())
         linearLayoutManager = LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
 
         recyclerView.layoutManager = linearLayoutManager
         recyclerView.adapter = recyclerAdapter
+
+        val recyclerView2: RecyclerView = view.findViewById(R.id.mainRecyclerView2)
+        recyclerAdapter2 = HomeAdapter()
+        recyclerAdapter2.setList(viewModel.getList2())
+        linearLayoutManager = LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
+
+        recyclerView2.layoutManager = linearLayoutManager
+        recyclerView2.adapter = recyclerAdapter2
+        val spinner = view.findViewById<Spinner>(R.id.categoryComboBox)
+        spinner.adapter = ArrayAdapter.createFromResource(view.context, R.array.catrgories, android.R.layout.simple_spinner_item)
         return view
     }
 }
