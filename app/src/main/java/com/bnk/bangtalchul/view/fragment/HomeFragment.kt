@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bnk.bangtalchul.R
-import com.bnk.bangtalchul.databinding.FragmentHomeBinding
 import com.bnk.bangtalchul.view.adapter.HomeAdapter
 import com.bnk.bangtalchul.viewmodel.HomeViewModel
 
