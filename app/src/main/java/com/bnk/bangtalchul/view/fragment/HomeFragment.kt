@@ -25,12 +25,13 @@ class HomeFragment : Fragment() {
         fun newInstance() = HomeFragment()
     }
 
-    private lateinit var binding: FragmentHomeBinding
+    // private lateinit var binding: FragmentHomeBinding
     private lateinit var viewModel: HomeViewModel
 
     private var linearLayoutManager: RecyclerView.LayoutManager? = null
     private lateinit var recyclerAdapter: HomeAdapter
     private lateinit var recyclerAdapter2: HomeAdapter
+    private lateinit var recyclerAdapter3: HomeAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,6 +54,15 @@ class HomeFragment : Fragment() {
 
         recyclerView2.layoutManager = linearLayoutManager
         recyclerView2.adapter = recyclerAdapter2
+
+        val recyclerView3: RecyclerView = view.findViewById(R.id.mainRecyclerView3)
+        recyclerAdapter3 = HomeAdapter()
+        recyclerAdapter3.setList(viewModel.getRegionList(""))
+        linearLayoutManager = LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
+
+        recyclerView3.layoutManager = linearLayoutManager
+        recyclerView3.adapter = recyclerAdapter3
+
         val spinner = view.findViewById<Spinner>(R.id.categoryComboBox)
         spinner.adapter = ArrayAdapter.createFromResource(view.context, R.array.catrgories, android.R.layout.simple_spinner_item)
         return view
