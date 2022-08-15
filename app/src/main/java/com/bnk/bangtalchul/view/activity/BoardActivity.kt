@@ -1,28 +1,62 @@
 package com.bnk.bangtalchul.view.activity
 
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.bnk.bangtalchul.R
 import com.bnk.bangtalchul.databinding.ActivityBoardBinding
+import com.bnk.bangtalchul.model.entity.BoardEntity
+import com.bnk.bangtalchul.view.adapter.BoardAdapter
+import com.bnk.bangtalchul.view.adapter.HomeAdapter
+import com.bnk.bangtalchul.viewmodel.BoardViewModel
+import com.bnk.bangtalchul.viewmodel.HomeViewModel
 
 class BoardActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityBoardBinding
 
+    private lateinit var boardViewModel: BoardViewModel
+
+    private var linearLayoutManager: RecyclerView.LayoutManager? = null
+    private lateinit var recyclerAdapter: BoardAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_board)
 
-        binding = ActivityBoardBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        val type = intent.getStringExtra("from")
 
-        setSupportActionBar(findViewById(R.id.toolbar))
-        binding.toolbarLayout.title = title
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        val recyclerView: RecyclerView = findViewById(R.id.board_recyclerview)
+        boardViewModel = BoardViewModel()
+        recyclerAdapter = BoardAdapter(this)
+        when (type){
+            "HOME" -> recyclerAdapter.setList(boardViewModel.getBoardList())
+            "MY_PAGE" -> recyclerAdapter.setList(boardViewModel.getMyBoardList())
         }
+
+        boardViewModel = ViewModelProviders.of(this).get(BoardViewModel::class.java)
+
+        linearLayoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = linearLayoutManager
+        recyclerView.adapter = recyclerAdapter
+        /* api 호출시
+        boardViewModel.getAll().observe(this, Observer<List<BoardEntity>> { contacts ->
+            // Update UI
+
+        });
+        */
     }
+
+    private fun deleteDialog(boardId: Int) {
+
+    }
+
+
 }
