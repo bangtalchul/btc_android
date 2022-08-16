@@ -7,10 +7,13 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ArrayAdapter.createFromResource
 import android.widget.Spinner
+import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bnk.bangtalchul.R
+import com.bnk.bangtalchul.model.entity.HomeEntity
 import com.bnk.bangtalchul.view.adapter.HomeAdapter
 import com.bnk.bangtalchul.viewmodel.HomeViewModel
 
@@ -29,6 +32,12 @@ class HomeFragment : Fragment() {
 
     private var linearLayoutManager: RecyclerView.LayoutManager? = null
     private lateinit var recyclerAdapter: HomeAdapter
+    private var itemList: ArrayList<HomeEntity> = arrayListOf()
+    private var itemList2: ArrayList<HomeEntity> = arrayListOf()
+    private var itemList3: ArrayList<HomeEntity> = arrayListOf()
+
+    //var itemList2 = viewModel.getList2()
+    //var itemList3 = viewModel.getRegionList("");
     private lateinit var recyclerAdapter2: HomeAdapter
     private lateinit var recyclerAdapter3: HomeAdapter
 
@@ -39,8 +48,10 @@ class HomeFragment : Fragment() {
         val view = inflater!!.inflate(R.layout.fragment_home, container, false)
         val recyclerView: RecyclerView = view.findViewById(R.id.mainRecyclerView)
         viewModel = HomeViewModel()
+        itemList = viewModel.getList()
         recyclerAdapter = HomeAdapter()
-        recyclerAdapter.setList(viewModel.getList())
+        recyclerAdapter.setList(itemList)
+
         linearLayoutManager = LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
 
         recyclerView.layoutManager = linearLayoutManager
@@ -48,7 +59,8 @@ class HomeFragment : Fragment() {
 
         val recyclerView2: RecyclerView = view.findViewById(R.id.mainRecyclerView2)
         recyclerAdapter2 = HomeAdapter()
-        recyclerAdapter2.setList(viewModel.getList2())
+        itemList2 = viewModel.getList2()
+        recyclerAdapter2.setList(itemList2)
         linearLayoutManager = LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
 
         recyclerView2.layoutManager = linearLayoutManager
@@ -56,7 +68,8 @@ class HomeFragment : Fragment() {
 
         val recyclerView3: RecyclerView = view.findViewById(R.id.mainRecyclerView3)
         recyclerAdapter3 = HomeAdapter()
-        recyclerAdapter3.setList(viewModel.getRegionList(""))
+        itemList3 = viewModel.getRegionList("")
+        recyclerAdapter3.setList(itemList3)
         linearLayoutManager = LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
 
         recyclerView3.layoutManager = linearLayoutManager
@@ -64,6 +77,29 @@ class HomeFragment : Fragment() {
 
         val spinner = view.findViewById<Spinner>(R.id.categoryComboBox)
         spinner.adapter = ArrayAdapter.createFromResource(view.context, R.array.catrgories, android.R.layout.simple_spinner_item)
+
+        recyclerAdapter.setItemClickListener(object: HomeAdapter.OnItemClickListener{
+            override fun onClick(v: View, position: Int) {
+                Toast.makeText(view.context,
+                    itemList[position].id.toString(),
+                    Toast.LENGTH_SHORT).show()
+            }
+        })
+
+        recyclerAdapter2.setItemClickListener(object: HomeAdapter.OnItemClickListener{
+            override fun onClick(v: View, position: Int) {
+
+
+            }
+        })
+
+        recyclerAdapter3.setItemClickListener(object: HomeAdapter.OnItemClickListener{
+            override fun onClick(v: View, position: Int) {
+                // 클릭 시 이벤트 작성
+
+            }
+        })
+
         return view
     }
 }

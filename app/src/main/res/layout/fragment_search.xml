@@ -12,7 +12,7 @@
             android:id="@+id/search_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:iconifiedByDefault="false"
+            app:iconifiedByDefault="true"
             app:queryHint="검색어를 입력하시오" />
 
         <androidx.recyclerview.widget.RecyclerView
