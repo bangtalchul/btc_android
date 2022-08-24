@@ -1,6 +1,9 @@
 package com.bnk.bangtalchul.view.activity
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -60,3 +63,7 @@ class BoardActivity : AppCompatActivity() {
 
 
 }
+
+//리사이클러 클릭 이벤트
+//https://mechacat.tistory.com/7
+//https://yunaaaas.tistory.com/57

@@ -10,8 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bangtalchul">
         <activity
+            android:name=".view.activity.BoardDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.activity.BoardActivity"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:label="@string/title_activity_board"
             android:theme="@style/Theme.Bangtalchul.NoActionBar" />
         <activity

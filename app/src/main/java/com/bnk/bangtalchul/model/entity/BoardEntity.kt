@@ -1,6 +1,7 @@
 package com.bnk.bangtalchul.model.entity
 
 import java.sql.Timestamp
+import java.io.Serializable
 
 data class BoardEntity (
     var boardId: Int,
@@ -9,7 +10,8 @@ data class BoardEntity (
     var commentNum: Int,
     var timestamp: String,
     var writerId: Int
-) {
+) : Serializable
+{
     constructor() : this(0, "", "", 0, "", 0) {
         this.boardId = boardId
         this.title = title

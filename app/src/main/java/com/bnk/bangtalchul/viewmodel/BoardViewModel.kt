@@ -12,6 +12,15 @@ class BoardViewModel() : ViewModel() {
     private val boards = repository.getBoardList()
     private val myBoards = repository.getMyBoardList()
 
+    private lateinit var board : BoardEntity
+
+    fun setBoard(board: BoardEntity) {
+        this.board = board
+    }
+
+    fun getBoard(): BoardEntity {
+        return this.board
+    }
 
     fun getBoardList(): ArrayList<BoardEntity> {
         return this.boards
