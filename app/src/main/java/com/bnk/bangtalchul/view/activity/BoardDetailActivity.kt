@@ -15,10 +15,6 @@ import com.bnk.bangtalchul.viewmodel.BoardViewModel
 
 class BoardDetailActivity : AppCompatActivity() {
     lateinit var board : BoardEntity
-    private lateinit var linearLayout : LinearLayout
-    private lateinit var title : TextView
-    private lateinit var content : TextView
-
     private lateinit var boardViewModel: BoardViewModel
     private val commentRepository = CommentRepository()
 
@@ -32,9 +28,9 @@ class BoardDetailActivity : AppCompatActivity() {
         // board info setting on view
         board = intent.getSerializableExtra("board") as BoardEntity
 
-        linearLayout = findViewById(R.id.chatpage_bottomsheet)
-        title = findViewById(R.id.chatpage_title_textview)
-        content = findViewById(R.id.chatpage_expandable_layout);
+        val linearLayout = findViewById<LinearLayout>(R.id.chatpage_bottomsheet)
+        val title = findViewById<TextView>(R.id.chatpage_title_textview)
+        val content = findViewById<TextView>(R.id.chatpage_expandable_layout);
 
         linearLayout.bringToFront()
         title.text = board.title
