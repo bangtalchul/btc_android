@@ -28,34 +28,34 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         auth = FirebaseAuth.getInstance()
-    }
-
-    override fun onStart() {
-        super.onStart()
         if (false) {
             //if (auth?.currentUser == null) {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
-        } else {
-            supportFragmentManager.beginTransaction().add(fl.id, HomeFragment()).commit()
-
-            bn.setOnNavigationItemSelectedListener {
-                replaceFragment(
-                    when (it.itemId) {
-                        R.id.menu_home -> HomeFragment()
-                        R.id.menu_search -> SearchFragment()
-                        R.id.menu_community -> CommunityFragment()
-                        else -> MyPageFragment()
-                    }
-                )
-                true
-            }
+        }
+        else {
+            supportFragmentManager.beginTransaction().add(fl.id, HomeFragment()).addToBackStack(null).commit()
         }
 
     }
+
+    override fun onStart() {
+        super.onStart()
+        bn.setOnNavigationItemSelectedListener {
+            replaceFragment(
+                when (it.itemId) {
+                    R.id.menu_home -> HomeFragment()
+                    R.id.menu_search -> SearchFragment()
+                    R.id.menu_community -> CommunityFragment()
+                    else -> MyPageFragment()
+                }
+            )
+            true
+        }
+    }
     private fun replaceFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().replace(fl.id, fragment).commit()
+        supportFragmentManager.beginTransaction().replace(fl.id, fragment).addToBackStack(null).commit()
     }
 
 }
