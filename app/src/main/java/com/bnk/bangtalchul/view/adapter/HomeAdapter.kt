@@ -1,6 +1,5 @@
 package com.bnk.bangtalchul.view.adapter
 
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,17 +8,18 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bnk.bangtalchul.R
 import com.bnk.bangtalchul.model.entity.HomeEntity
+import kotlin.collections.ArrayList
 
 class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
-    private var list: ArrayList<HomeEntity> = arrayListOf()
+    private var list = ArrayList<HomeEntity>()
 
-    fun setList(cafeList: ArrayList<HomeEntity>) {
-        this.list = cafeList
+    fun setList(list: ArrayList<HomeEntity>) {
+        this.list = list
         notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, i: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.main_cardview, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.main_item, parent, false)
         return ViewHolder(view)
     }
 
@@ -48,12 +48,11 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         private val name = itemView.findViewById<TextView>(R.id.name)
         private val address = itemView.findViewById<TextView>(R.id.address)
-        // private val photoUrl = itemView.findViewById<ImageView>(R.id.photo_url)
+        private val photoUrl = itemView.findViewById<ImageView>(R.id.photo_url)
 
         fun bind(home: HomeEntity) {
             name.text = home.name
             address.text = home.address
-
 //            itemView.setOnClickListener {
 //                homeItemClick(home)
 //            }
