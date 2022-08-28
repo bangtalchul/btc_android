@@ -9,7 +9,6 @@ class StoreViewModel : ViewModel() {
 
     private val storeRepository = StoreRepository()
     private val homeStoreList = storeRepository.getHomeStoreList()
-    private val storeList = storeRepository.getStoreList()
 
     fun getHomeStoreList(): ArrayList<HomeEntity> {
         return this.homeStoreList
@@ -19,7 +18,7 @@ class StoreViewModel : ViewModel() {
         return storeRepository.getHomeRegionList(region)
     }
 
-    fun getStoreList(): ArrayList<StoreEntity> {
-        return this.storeList
+    fun getStoreList(string :String): ArrayList<StoreEntity> {
+        return this.storeRepository.getStoreList(string)
     }
 }

@@ -29,7 +29,7 @@ class SearchFragment : Fragment() {
         val recyclerView: RecyclerView = view.findViewById(R.id.searchRecyclerView)
         viewModel = StoreViewModel()
         recyclerAdapter = StoreAdapter()
-        recyclerAdapter.setList(viewModel.getStoreList())
+        recyclerAdapter.setList(viewModel.getStoreList(""))
         linearLayoutManager = LinearLayoutManager(this.context, LinearLayoutManager.VERTICAL, false)
 
         recyclerView.layoutManager = linearLayoutManager

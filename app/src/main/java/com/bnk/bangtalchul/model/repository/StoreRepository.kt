@@ -38,7 +38,7 @@ class StoreRepository {
         return homeRegionList
     }
 
-    fun getStoreList(): ArrayList<StoreEntity> {
+    fun getStoreList(string: String): ArrayList<StoreEntity> {
         return storeList
     }
 }
