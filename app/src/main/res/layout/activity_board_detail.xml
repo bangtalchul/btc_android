@@ -86,18 +86,21 @@
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-        <ScrollView
+        <androidx.core.widget.NestedScrollView
             android:id="@+id/chatpage_postbar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
             app:layout_constraintTop_toBottomOf="@id/chatpage_toolbar_layout"
+            app:layout_constraintEnd_toEndOf="@id/chatpage_bottomsheet"
             android:orientation="vertical">
             <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                android:descendantFocusability="blocksDescendants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                    <TextView
+                <TextView
                         android:id="@+id/chatpage_expandable_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -115,21 +118,19 @@
                         android:text="ㅎ0ㅎ"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
-                    <ListView
-                        android:id="@+id/chatpage_message_listview"
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/board_recyclerview"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentEnd="true"
-                        app:layout_constraintBottom_toTopOf="@id/chatpage_bottomsheet"
-                        app:layout_constraintTop_toBottomOf="@id/chatpage_postbar_layout"
-                        android:stackFromBottom="false"
-                        android:transcriptMode="alwaysScroll"
-                        android:layout_weight="1"
-                        android:divider="#ffffff"
-                        android:dividerHeight="0dp"/>
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="100dp"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/comment_item">
+                    </androidx.recyclerview.widget.RecyclerView>
+
                 </LinearLayout>
-        </ScrollView>
+        </androidx.core.widget.NestedScrollView>
 
         <LinearLayout
             android:id="@+id/chatpage_bottomsheet"
@@ -150,8 +151,6 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
-
-
 
                 <EditText
                     android:id="@+id/chatpage_typein_edittext"
@@ -191,3 +190,8 @@
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+
+<!--
+https://black-jin0427.tistory.com/164
+https://velog.io/@kimbsu00/Android-7
+-->
