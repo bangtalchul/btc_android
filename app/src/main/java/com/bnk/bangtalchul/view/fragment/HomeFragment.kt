@@ -83,7 +83,7 @@ class HomeFragment : Fragment() {
             override fun onClick(v: View, position: Int) {
                 var intent = Intent(activity, StoreActivity::class.java)
 
-                intent.putExtra("store_id", homeStoreList[position].id.toString())
+                intent.putExtra("store_id", homeStoreList[position].id.toInt())
                 startActivity(intent)
             }
         })

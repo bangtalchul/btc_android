@@ -21,4 +21,8 @@ class StoreViewModel : ViewModel() {
     fun getStoreList(string :String): ArrayList<StoreEntity> {
         return this.storeRepository.getStoreList(string)
     }
+
+    fun getStoreInfo(storeId :Int): StoreEntity {
+        return this.storeRepository.getStoreInfo(storeId)
+    }
 }
