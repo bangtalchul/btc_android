@@ -2,6 +2,7 @@ package com.bnk.bangtalchul.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -38,7 +39,12 @@ class StoreActivity : AppCompatActivity() {
 
         val title = findViewById<TextView>(R.id.title_textview)
         val address = findViewById<TextView>(R.id.storeAddress)
-        val desc = findViewById<TextView>(R.id.storeDesc);
+        val desc = findViewById<TextView>(R.id.storeDesc)
+        val backButton = findViewById<ImageButton>(R.id.backbutton)
+
+        backButton.setOnClickListener {
+            finish()
+        }
 
         title.text = storeInfo.name
         address.text = storeInfo.address

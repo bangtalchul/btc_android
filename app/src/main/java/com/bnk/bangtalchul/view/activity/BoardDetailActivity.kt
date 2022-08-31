@@ -2,6 +2,7 @@ package com.bnk.bangtalchul.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -37,6 +38,13 @@ class BoardDetailActivity : AppCompatActivity() {
         content.text = board.content
 
         boardViewModel = BoardViewModel()
+
+
+        //back button
+        val backButton = findViewById<ImageButton>(R.id.chatpage_backbutton)
+        backButton.setOnClickListener {
+            finish()
+        }
 
 
         // get comment list

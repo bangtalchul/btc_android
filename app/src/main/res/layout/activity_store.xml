@@ -42,9 +42,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/bold"
-                    android:text="팟 구해여"
+                    android:text=""
                     android:textColor="@color/main_purple"
-                    android:textSize="16dp" />
+                    android:textSize="16dp"/>
 
             </androidx.appcompat.widget.Toolbar>
 
