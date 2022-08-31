@@ -30,7 +30,7 @@ class BoardDetailActivity : AppCompatActivity() {
 
         val linearLayout = findViewById<LinearLayout>(R.id.chatpage_bottomsheet)
         val title = findViewById<TextView>(R.id.chatpage_title_textview)
-        val content = findViewById<TextView>(R.id.chatpage_expandable_layout);
+        val content = findViewById<TextView>(R.id.chatpage_expandable_layout)
 
         linearLayout.bringToFront()
         title.text = board.title

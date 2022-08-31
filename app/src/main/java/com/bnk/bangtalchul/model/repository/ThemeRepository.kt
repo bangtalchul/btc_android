@@ -14,11 +14,11 @@ class ThemeRepository {
     )
 
     private val themeList :ArrayList<ThemeEntity> = arrayListOf(
-        ThemeEntity(1, "테마1", "부산광역시", "", "", "", 0, 0, "store2", 0)
-        , ThemeEntity(2, "테마2", "부산광역시", "", "", "", 0, 0, "store2", 0)
-        , ThemeEntity(3, "테마3", "부산광역시", "", "", "", 0, 0, "store2", 0)
-        , ThemeEntity(4, "테마4", "부산광역시", "", "", "", 0, 0, "store2", 0)
-        , ThemeEntity(5, "테마5", "부산광역시", "", "", "", 0, 0, "store2", 0)
+        ThemeEntity(1, "테마1", "", "", "", "", 0, 0, "store2", 0)
+        , ThemeEntity(2, "테마2", "", "", "", "", 0, 0, "store2", 0)
+        , ThemeEntity(3, "테마3", "", "", "", "", 0, 0, "store2", 0)
+        , ThemeEntity(4, "테마4", "", "", "", "", 0, 0, "store2", 0)
+        , ThemeEntity(5, "테마5", "", "", "", "", 0, 0, "store2", 0)
     )
 
     fun getHomeThemeList(): ArrayList<HomeEntity> {

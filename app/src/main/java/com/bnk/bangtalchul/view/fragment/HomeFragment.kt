@@ -83,7 +83,7 @@ class HomeFragment : Fragment() {
             override fun onClick(v: View, position: Int) {
                 var intent = Intent(activity, StoreActivity::class.java)
 
-                intent.putExtra("store_id", homeStoreList[position].id.toInt())
+                intent.putExtra("store_id", homeStoreList[position].id)
                 startActivity(intent)
             }
         })
@@ -92,7 +92,7 @@ class HomeFragment : Fragment() {
             override fun onClick(v: View, position: Int) {
                 var intent = Intent(activity, StoreActivity::class.java)
 
-                intent.putExtra("theme_id", homeThemeList[position].id.toString())
+                intent.putExtra("theme_id", homeThemeList[position].id)
                 startActivity(intent)
             }
         })
@@ -101,7 +101,7 @@ class HomeFragment : Fragment() {
             override fun onClick(v: View, position: Int) {
                 var intent = Intent(activity, StoreActivity::class.java)
 
-                intent.putExtra("store_id", homeRegionList[position].id.toString())
+                intent.putExtra("store_id", homeRegionList[position].id)
                 startActivity(intent)
             }
         })

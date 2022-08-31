@@ -8,6 +8,50 @@
     android:orientation="vertical"
     >
 
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+
+                <ImageButton
+                    android:id="@+id/backbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/back_button"
+                    android:paddingTop="18dp"
+                    android:paddingBottom="18dp"/>
+
+                <TextView
+                    android:id="@+id/title_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/bold"
+                    android:text="팟 구해여"
+                    android:textColor="@color/main_purple"
+                    android:textSize="16dp" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
     <ImageView
         android:id="@+id/storeImage"
         android:layout_width="match_parent"

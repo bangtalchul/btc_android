@@ -36,9 +36,11 @@ class StoreActivity : AppCompatActivity() {
         val storeId = intent.getStringExtra("store_id")?.toInt()?: 0
         var storeInfo = storeViewModel.getStoreInfo(storeId)
 
+        val title = findViewById<TextView>(R.id.title_textview)
         val address = findViewById<TextView>(R.id.storeAddress)
         val desc = findViewById<TextView>(R.id.storeDesc);
 
+        title.text = storeInfo.name
         address.text = storeInfo.address
         desc.text = storeInfo.desc
 
