@@ -56,28 +56,33 @@
                         android:textSize="16dp" />
 
                     <ImageButton
-                        android:id="@+id/chatpage_drawer_button"
+                        android:id="@+id/delete_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
-                        android:paddingTop="18dp"
-                        android:paddingBottom="18dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
                         android:background="@null"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/back_button"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/delete_icon"
+                        android:layout_marginRight="15dp"
                         />
 
                     <ImageButton
-                        android:id="@+id/chatpage_drawer_button2"
+                        android:id="@+id/edit_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
-                        android:paddingTop="18dp"
-                        android:paddingBottom="18dp"
                         android:background="@null"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/back_button"
-                        />
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/write"
+                        android:layout_marginRight="15dp"/>
+
+
 
 
                 </androidx.appcompat.widget.Toolbar>
