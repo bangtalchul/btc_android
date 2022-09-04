@@ -3,19 +3,11 @@ package com.bnk.bangtalchul.view.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
-import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.bnk.bangtalchul.R
-import com.bnk.bangtalchul.model.entity.BoardEntity
-import com.bnk.bangtalchul.model.repository.CommentRepository
 import com.bnk.bangtalchul.model.repository.ThemeRepository
-import com.bnk.bangtalchul.view.adapter.BoardAdapter
-import com.bnk.bangtalchul.view.adapter.CommentAdapter
 import com.bnk.bangtalchul.view.adapter.ThemeAdapter
-import com.bnk.bangtalchul.viewmodel.BoardViewModel
 import com.bnk.bangtalchul.viewmodel.StoreViewModel
 import com.bnk.bangtalchul.viewmodel.ThemeViewModel
 
@@ -66,7 +58,7 @@ class StoreActivity : AppCompatActivity() {
 
         recyclerAdapter = ThemeAdapter(this)
 
-        recyclerAdapter.setList(themeRepository.getThemeList(storeId))
+        recyclerAdapter.setList(themeViewModel.getThemeList(storeId))
 
         recyclerView.adapter = recyclerAdapter
     }

@@ -18,4 +18,8 @@ class ThemeViewModel : ViewModel() {
     fun getThemeList(storeId :Int): ArrayList<ThemeEntity> {
         return this.themeRepository.getThemeList(storeId)
     }
+
+    fun getThemeInfo(themeId :Int): ThemeEntity {
+        return this.themeRepository.getThemeInfo(themeId)
+    }
 }

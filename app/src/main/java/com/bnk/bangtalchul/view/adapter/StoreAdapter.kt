@@ -34,9 +34,9 @@ class StoreAdapter : RecyclerView.Adapter<StoreAdapter.ViewHolder>() {
         private val address = itemView.findViewById<TextView>(R.id.address)
         // private val photoUrl = itemView.findViewById<ImageView>(R.id.photo_url)
 
-        fun bind(home: StoreEntity) {
-            name.text = home.name
-            address.text = home.address
+        fun bind(store: StoreEntity) {
+            name.text = store.name
+            address.text = store.address
 
 //            itemView.setOnClickListener {
 //                homeItemClick(home)

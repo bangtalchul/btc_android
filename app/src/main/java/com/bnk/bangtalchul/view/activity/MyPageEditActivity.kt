@@ -2,6 +2,7 @@ package com.bnk.bangtalchul.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bnk.bangtalchul.R
 
 class MyPageEditActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

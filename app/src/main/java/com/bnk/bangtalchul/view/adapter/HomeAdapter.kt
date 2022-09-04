@@ -53,14 +53,6 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
         fun bind(home: HomeEntity) {
             name.text = home.name
             address.text = home.address
-//            itemView.setOnClickListener {
-//                homeItemClick(home)
-//            }
-
-//            itemView.setOnLongClickListener {
-//                homeItemLongClick(home)
-//                true
-//            }
         }
     }
 }
