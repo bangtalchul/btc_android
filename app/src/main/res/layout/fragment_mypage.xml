@@ -13,17 +13,68 @@
         android:layout_height="match_parent"
         tools:context=".view.fragment.MyPageFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-<!--        <Button-->
-<!--            android:id="@+id/button"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@{viewModel.buttonText}"-->
-<!--            android:onClick="@{()->viewModel.onButtonClick()}" />-->
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/mypage_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="0dp">
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/chatpage_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white">
+
+                    <ImageButton
+                        android:id="@+id/chatpage_backbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/back_button"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp"/>
+
+                    <TextView
+                        android:id="@+id/chatpage_title_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:text="마이페이지"
+                        android:textColor="@color/main_purple"
+                        android:textSize="16dp" />
+
+
+
+                    <ImageButton
+                        android:id="@+id/chatpage_drawer_button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp"
+                        android:background="@null"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/back_button"
+                        />
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_bar_height">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -32,17 +83,38 @@
                 android:padding="@dimen/mypage_padding"
                 android:gravity="center">
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/circle"
-                    android:layout_width="@dimen/mypage_profile_image"
-                    android:layout_height="@dimen/mypage_profile_image"
-                    android:layout_margin="10dp"
-                    android:scaleType="centerCrop"
-                    android:layout_marginBottom="@dimen/mypage_bottom_margin"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:shapeAppearanceOverlay="@style/circle"
-                    app:srcCompat="@drawable/default_profile_img" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/circle"
+                        android:layout_width="@dimen/mypage_profile_image"
+                        android:layout_height="@dimen/mypage_profile_image"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/circle"
+                        app:srcCompat="@drawable/default_profile_img" />
+
+                    <TextView
+                        android:id="@+id/mypage_edit_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center"
+                        android:text="수정"
+                        android:textColor="@color/main_purple"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:onClick="@{() -> viewModel.goPage(0)}"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -76,7 +148,6 @@
                     android:layout_marginLeft="@dimen/mypage_left_margin"
                     android:layout_marginRight="@dimen/mypage_right_margin"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="@dimen/mypage_bottom_margin"
                     android:orientation="horizontal">
 
                     <TextView

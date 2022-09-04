@@ -12,6 +12,7 @@ import com.bnk.bangtalchul.R
 import com.bnk.bangtalchul.databinding.FragmentMypageBinding
 import com.bnk.bangtalchul.util.eventObserve
 import com.bnk.bangtalchul.view.activity.BoardActivity
+import com.bnk.bangtalchul.view.activity.MyPageEditActivity
 import com.bnk.bangtalchul.viewmodel.MyPageViewModel
 
 class MyPageFragment : Fragment() {
@@ -45,6 +46,7 @@ class MyPageFragment : Fragment() {
         viewModel.openEvent.eventObserve(this) { type ->
             lateinit var intent : Intent
             when (type) {
+                0 -> intent = Intent(this.context, MyPageEditActivity::class.java)
                 1 -> intent = Intent(this.context, BoardActivity::class.java)
                 2 -> intent = Intent(this.context, BoardActivity::class.java)
                 3 -> intent = Intent(this.context, BoardActivity::class.java)

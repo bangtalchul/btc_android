@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bangtalchul">
         <activity
+            android:name=".view.activity.MyPageEditActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.activity.StoreActivity"
             android:exported="false" />
         <activity
@@ -18,23 +21,22 @@
         <activity
             android:name=".view.activity.BoardActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
             android:label="@string/title_activity_board"
-            android:theme="@style/Theme.Bangtalchul.NoActionBar" />
+            android:theme="@style/Theme.Bangtalchul.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".view.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".view.activity.LoginActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

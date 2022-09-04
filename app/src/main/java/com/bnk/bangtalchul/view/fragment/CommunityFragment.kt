@@ -32,7 +32,5 @@ class CommunityFragment : Fragment() {
         var intent = Intent(this.context, BoardActivity::class.java)
         intent.putExtra("from", "HOME")
         startActivity(intent)
-        // TODO: Use the ViewModel
-
     }
 }
