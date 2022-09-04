@@ -1,6 +1,9 @@
 package com.bnk.bangtalchul.view.activity
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.KeyEvent
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -44,8 +47,31 @@ class BoardActivity : AppCompatActivity() {
 
         });
         */
+
+        //뒤로가기 버튼
+        val backButton = findViewById<ImageButton>(R.id.backbutton)
+        backButton.setOnClickListener {
+            when (type){
+                "HOME" -> fromHomeBack()
+                "MY_PAGE" -> finish()
+            }
+
+        }
     }
 
+    private fun fromHomeBack(){
+        var intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    override fun onKeyDown(keycode: Int, event: KeyEvent?): Boolean {
+        if (keycode == KeyEvent.KEYCODE_BACK) {
+            finish()
+            return true
+        }
+        return false
+    }
     private fun deleteDialog(boardId: Int) {
 
     }

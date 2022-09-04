@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:title="Home"
         android:enabled="true"
         android:id="@+id/menu_home"
         android:icon="@drawable/home" />
     <item
-        android:title="Search"
-        android:enabled="true"
         android:id="@+id/menu_search"
-        android:icon="@drawable/search" />
-    <item
-        android:title="Community"
         android:enabled="true"
+        android:icon="@drawable/search"
+        android:title="Search" />
+    <item
         android:id="@+id/menu_community"
-        android:icon="@drawable/community" />
+        android:enabled="true"
+        android:icon="@drawable/community"
+        android:title="Community" />
     <item
         android:title="MyPage"
         android:enabled="true"
