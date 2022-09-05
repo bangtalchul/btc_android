@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bangtalchul">
         <activity
+            android:name=".view.activity.ReserveActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.activity.ThemeActivity"
             android:exported="false" />
         <activity

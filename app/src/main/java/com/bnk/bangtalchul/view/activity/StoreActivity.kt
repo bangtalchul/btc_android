@@ -15,7 +15,6 @@ class StoreActivity : AppCompatActivity() {
 
     private lateinit var themeViewModel: ThemeViewModel
     private lateinit var storeViewModel: StoreViewModel
-    private val themeRepository = ThemeRepository()
 
     private lateinit var recyclerAdapter: ThemeAdapter
 

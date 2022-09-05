@@ -57,36 +57,15 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/store3" />
+        app:srcCompat="@drawable/store4" />
 
-    <TextView
-        android:id="@+id/storeAddress"
+    <Button
+        android:id="@+id/btn_reserve"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textColor="@color/main_purple"
-        />
-    <TextView
-        android:id="@+id/storeDesc"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textColor="@color/main_purple"
+        android:layout_height="100dp"
+        android:textColor="@color/white"
+        android:text="예약 하기"
         />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/image_viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="26dp"
-        android:clipToPadding="false"
-        android:clipChildren="false"
-        android:foregroundGravity="center"
-        android:overScrollMode="never"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/theme_item"
-        />
 </LinearLayout>
+

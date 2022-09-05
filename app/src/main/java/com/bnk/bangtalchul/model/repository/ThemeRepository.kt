@@ -1,6 +1,7 @@
 package com.bnk.bangtalchul.model.repository
 
 import com.bnk.bangtalchul.model.entity.HomeEntity
+import com.bnk.bangtalchul.model.entity.ReserveEntity
 import com.bnk.bangtalchul.model.entity.StoreEntity
 import com.bnk.bangtalchul.model.entity.ThemeEntity
 
@@ -22,6 +23,13 @@ class ThemeRepository {
         , ThemeEntity(5, "테마5", "", "", "", "", 0, 0, "store2", 0)
     )
 
+    private val reserveList :ArrayList<ReserveEntity> = arrayListOf(
+        ReserveEntity(1, "책 읽어주는 남자", "20220908", "0", "0900", "1000", 0, 0)
+        , ReserveEntity(1, "책 읽어주는 남자", "20220908", "0", "1100", "1200", 0, 0)
+        , ReserveEntity(1, "책 읽어주는 남자", "20220909", "0", "0900", "1000", 0, 0)
+        , ReserveEntity(1, "책 읽어주는 남자", "20220910", "0", "0900", "1000", 0, 0)
+    )
+
     private val themeInfo : ThemeEntity = ThemeEntity(1, "책 읽어주는 남자", "30", "1", "", "", 1, 0, "store1", 0)
 
     fun getHomeThemeList(): ArrayList<HomeEntity> {
@@ -34,5 +42,9 @@ class ThemeRepository {
 
     fun getThemeInfo(themeId: Int): ThemeEntity {
         return themeInfo
+    }
+
+    fun getReserveList(themeId: Int): ArrayList<ReserveEntity> {
+        return reserveList
     }
 }
