@@ -8,6 +8,7 @@ import android.widget.TextView
 import com.bnk.bangtalchul.R
 import com.bnk.bangtalchul.model.repository.UserInfoRepository
 
+
 class MyPageEditActivity : AppCompatActivity() {
 
     val userInfoRepo = UserInfoRepository()
