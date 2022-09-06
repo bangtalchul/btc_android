@@ -45,32 +45,6 @@
                     android:text="팟 구해여"
                     android:textColor="@color/main_purple"
                     android:textSize="16dp" />
-
-                <ImageButton
-                    android:id="@+id/chatpage_drawer_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:paddingTop="18dp"
-                    android:paddingBottom="18dp"
-                    android:background="@null"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/back_button"
-                    />
-
-                <ImageButton
-                    android:id="@+id/chatpage_drawer_button2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:paddingTop="18dp"
-                    android:paddingBottom="18dp"
-                    android:background="@null"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/back_button"
-                    />
-
-
             </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
