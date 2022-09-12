@@ -29,15 +29,24 @@ class ThemeActivity : AppCompatActivity() {
 
         val title = findViewById<TextView>(R.id.title_textview)
         val backButton = findViewById<ImageButton>(R.id.backbutton)
-        val reserveButton = findViewById<Button>(R.id.btn_reserve)
+        val time = findViewById<TextView>(R.id.themeTime)
+        val limit = findViewById<TextView>(R.id.themeLimit)
+        val level = findViewById<TextView>(R.id.themeLevel)
+        val desc = findViewById<TextView>(R.id.themeDesc)
+
+        val reserveBtn = findViewById<Button>(R.id.reserveBtn)
 
         title.text = themeInfo.name
+        time.text  = themeInfo.time + "분"
+        limit.text = themeInfo.limit.toString() + "명"
+        level.text = themeInfo.level + "단계"
+        desc.text  = themeInfo.desc
 
         backButton.setOnClickListener {
             finish()
         }
 
-        reserveButton.setOnClickListener {
+        reserveBtn.setOnClickListener {
             var intent = Intent(this, ReserveActivity::class.java)
             intent.putExtra("theme_id", themeInfo.themeId)
             startActivity(intent)

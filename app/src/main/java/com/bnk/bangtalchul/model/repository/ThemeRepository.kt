@@ -30,7 +30,7 @@ class ThemeRepository {
         , ReserveEntity(1, "책 읽어주는 남자", "20220910", "0", "0900", "1000", 0, 0)
     )
 
-    private val themeInfo : ThemeEntity = ThemeEntity(1, "책 읽어주는 남자", "30", "1", "", "", 1, 0, "store1", 0)
+    private val themeInfo : ThemeEntity = ThemeEntity(1, "책 읽어주는 남자", "30", "1", "테마소개입니다", "3", 1, 0, "store1", 6)
 
     fun getHomeThemeList(): ArrayList<HomeEntity> {
         return homeThemeList

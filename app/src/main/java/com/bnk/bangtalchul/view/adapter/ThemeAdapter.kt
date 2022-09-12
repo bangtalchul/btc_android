@@ -37,12 +37,12 @@ class ThemeAdapter(activity: Activity) : RecyclerView.Adapter<ThemeAdapter.ViewH
     }
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        private val name = itemView.findViewById<TextView>(R.id.name)
+        private val theme_name = itemView.findViewById<TextView>(R.id.theme_name)
         // private val address = itemView.findViewById<TextView>(R.id.address)
         // private val photoUrl = itemView.findViewById<ImageView>(R.id.photo_url)
 
         fun bind(theme: ThemeEntity) {
-            // name.text = home.name
+            theme_name.text = theme.name
             // address.text = home.address
 
             itemView.setOnClickListener {
