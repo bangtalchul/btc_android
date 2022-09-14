@@ -42,6 +42,10 @@ class ThemeActivity : AppCompatActivity() {
         level.text = themeInfo.level + "단계"
         desc.text  = themeInfo.desc
 
+        val fireWorkUnicode = 0x1F5D2
+        val emojiText = "${String(Character.toChars(fireWorkUnicode))} 예약하기"
+        reserveBtn.text = emojiText
+
         backButton.setOnClickListener {
             finish()
         }

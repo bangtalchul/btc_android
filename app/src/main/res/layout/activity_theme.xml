@@ -44,7 +44,7 @@
                     android:fontFamily="@font/bold"
                     android:text=""
                     android:textColor="@color/main_purple"
-                    android:textSize="16dp"/>
+                    android:textSize="18dp"/>
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -63,8 +63,10 @@
 
             <ImageView
                 android:id="@+id/storeImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="250dp"
+                android:layout_height="400dp"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/store4" />
 
@@ -86,14 +88,14 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/bold"
                         android:layout_marginRight="20dp"
-                        android:textSize="15dp"
+                        android:textSize="18dp"
                         android:text="제한 시간"/>
 
                     <TextView
                         android:id="@+id/themeTime"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="15dp"
+                        android:textSize="18dp"
                         android:text="부산광역시 해운대"/>
                 </LinearLayout>
 
@@ -108,21 +110,21 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/bold"
                         android:layout_marginRight="20dp"
-                        android:textSize="15dp"
+                        android:textSize="18dp"
                         android:text="제한 인원"/>
 
                     <TextView
                         android:id="@+id/themeLimit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="15dp"
+                        android:textSize="18dp"
                         android:text="10:00 ~ 21:00"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="18dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -130,21 +132,21 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/bold"
                         android:layout_marginRight="20dp"
-                        android:textSize="15dp"
+                        android:textSize="18dp"
                         android:text="난  이  도"/>
 
                     <TextView
                         android:id="@+id/themeLevel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="15dp"
+                        android:textSize="18dp"
                         android:text="10:00 ~ 21:00"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="18dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -153,31 +155,34 @@
                         android:fontFamily="@font/bold"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="10dp"
-                        android:textSize="15dp"
+                        android:textSize="18dp"
                         android:text="테마 소개"/>
 
                     <TextView
                         android:id="@+id/themeDesc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="15dp"
+                        android:textSize="18dp"
                         android:text="소개소개"/>
                 </LinearLayout>
 
-                <LinearLayout
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/reserveBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/reserveBtn"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="예약 하기"
-                        />
-                </LinearLayout>
-
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="예약 하기"
+                    android:textSize="20dp"
+                    android:background="@drawable/radius"
+                    />
             </LinearLayout>
         </LinearLayout>
 
