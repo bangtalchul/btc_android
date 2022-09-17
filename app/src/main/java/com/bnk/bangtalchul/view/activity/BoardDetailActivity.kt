@@ -70,7 +70,7 @@ class BoardDetailActivity : AppCompatActivity() {
 
 
         //back button
-        val backButton = findViewById<ImageButton>(R.id.chatpage_backbutton)
+        val backButton = findViewById<ImageButton>(R.id.backbutton)
         backButton.setOnClickListener {
             finish()
         }
@@ -82,7 +82,6 @@ class BoardDetailActivity : AppCompatActivity() {
 
         // comment data setting in view
         val recyclerView: RecyclerView = findViewById(R.id.board_recyclerview)
-        boardViewModel = BoardViewModel()
         recyclerAdapter = CommentAdapter(this)
 
         recyclerAdapter.setList(commentRepository.getCommentList(board.boardId))

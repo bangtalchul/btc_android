@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.bnk.bangtalchul.viewmodel.MyPageViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.activity.CollectionActivity">
@@ -67,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="총 6번 참 하셨군요!"
+        android:text="총 0번 참여하셨군요~"
         android:textColor="@color/main_purple"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,3 +98,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

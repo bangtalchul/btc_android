@@ -12,6 +12,7 @@ import com.bnk.bangtalchul.R
 import com.bnk.bangtalchul.databinding.FragmentMypageBinding
 import com.bnk.bangtalchul.util.eventObserve
 import com.bnk.bangtalchul.view.activity.BoardActivity
+import com.bnk.bangtalchul.view.activity.CollectionActivity
 import com.bnk.bangtalchul.view.activity.MyPageEditActivity
 import com.bnk.bangtalchul.viewmodel.MyPageViewModel
 
@@ -50,7 +51,7 @@ class MyPageFragment : Fragment() {
                 1 -> intent = Intent(this.context, BoardActivity::class.java)
                 2 -> intent = Intent(this.context, BoardActivity::class.java)
                 3 -> intent = Intent(this.context, BoardActivity::class.java)
-                4 -> intent = Intent(this.context, BoardActivity::class.java)
+                4 -> intent = Intent(this.context, CollectionActivity::class.java)
             }
             intent.putExtra("from", "MY_PAGE")
             startActivity(intent)
