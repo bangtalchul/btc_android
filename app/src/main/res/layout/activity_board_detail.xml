@@ -53,7 +53,7 @@
                         android:fontFamily="@font/bold"
                         android:text="팟 구해여"
                         android:textColor="@color/main_purple"
-                        android:textSize="16dp" />
+                        android:textSize="@dimen/title_text_size" />
 
                     <ImageButton
                         android:id="@+id/delete_button"

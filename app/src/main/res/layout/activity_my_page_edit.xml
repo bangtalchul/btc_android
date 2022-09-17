@@ -21,7 +21,7 @@
             android:elevation="0dp">
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/chatpage_toolbar"
+                android:id="@+id/mypage_edit_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@color/white">
@@ -37,17 +37,17 @@
                     android:paddingBottom="18dp"/>
 
                 <TextView
-                    android:id="@+id/chatpage_title_textview"
+                    android:id="@+id/mypage_edit_title_textview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/bold"
                     android:text="나의 정보 수정"
                     android:textColor="@color/main_purple"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/title_text_size" />
 
                 <TextView
-                    android:id="@+id/mypage_edit_save_button"
+                    android:id="@+id/mypage_edit_edit_save_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"

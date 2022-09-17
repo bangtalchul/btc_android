@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/chatpage_toolbar_layout"
+        android:id="@+id/community_toolbar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:elevation="0dp">
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/chatpage_toolbar"
+                android:id="@+id/community_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@color/white">
@@ -37,14 +37,14 @@
                     android:paddingBottom="18dp"/>
 
                 <TextView
-                    android:id="@+id/chatpage_title_textview"
+                    android:id="@+id/community_title_textview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/bold"
                     android:text="팟 구해여"
                     android:textColor="@color/main_purple"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/title_text_size" />
             </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -57,7 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/chatpage_toolbar_layout">
+        app:layout_constraintTop_toBottomOf="@id/community_toolbar_layout">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/board_recyclerview"
