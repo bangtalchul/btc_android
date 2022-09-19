@@ -28,7 +28,7 @@ class SearchFragment : Fragment() {
         val view = inflater!!.inflate(R.layout.fragment_search, container, false)
         val recyclerView: RecyclerView = view.findViewById(R.id.searchRecyclerView)
         viewModel = StoreViewModel()
-        recyclerAdapter = StoreAdapter()
+        recyclerAdapter = StoreAdapter(this.requireContext())
         recyclerAdapter.setList(viewModel.getStoreList(""))
         linearLayoutManager = LinearLayoutManager(this.context, LinearLayoutManager.VERTICAL, false)
 

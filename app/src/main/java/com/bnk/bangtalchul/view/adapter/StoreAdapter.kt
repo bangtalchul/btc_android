@@ -1,14 +1,16 @@
 package com.bnk.bangtalchul.view.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bnk.bangtalchul.R
 import com.bnk.bangtalchul.model.entity.StoreEntity
 
-class StoreAdapter : RecyclerView.Adapter<StoreAdapter.ViewHolder>() {
+class StoreAdapter(var context: Context) : RecyclerView.Adapter<StoreAdapter.ViewHolder>() {
     private var list: ArrayList<StoreEntity> = arrayListOf()
 
     fun setList(storeList: ArrayList<StoreEntity>) {
@@ -32,20 +34,18 @@ class StoreAdapter : RecyclerView.Adapter<StoreAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         private val name = itemView.findViewById<TextView>(R.id.name)
         private val address = itemView.findViewById<TextView>(R.id.address)
-        // private val photoUrl = itemView.findViewById<ImageView>(R.id.photo_url)
+        private val photoUrl = itemView.findViewById<ImageView>(R.id.photo_url)
 
         fun bind(store: StoreEntity) {
             name.text = store.name
             address.text = store.address
 
-//            itemView.setOnClickListener {
-//                homeItemClick(home)
-//            }
-
-//            itemView.setOnLongClickListener {
-//                homeItemLongClick(home)
-//                true
-//            }
+            if (store.photoUrl != "") {
+                val resourceId = context.resources.getIdentifier(store.photoUrl, "drawable", context.packageName)
+                photoUrl?.setImageResource(resourceId)
+            } else {
+                photoUrl?.setImageResource(R.mipmap.ic_launcher)
+            }
         }
     }
 }

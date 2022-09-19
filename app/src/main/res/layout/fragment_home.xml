@@ -61,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/main_item" />
+                    tools:listitem="@layout/main_item2" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"

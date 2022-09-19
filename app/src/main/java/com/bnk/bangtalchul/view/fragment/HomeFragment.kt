@@ -15,6 +15,7 @@ import com.bnk.bangtalchul.R
 import com.bnk.bangtalchul.model.entity.HomeEntity
 import com.bnk.bangtalchul.view.activity.StoreActivity
 import com.bnk.bangtalchul.view.adapter.HomeAdapter
+import com.bnk.bangtalchul.view.adapter.HomeAdapter2
 import com.bnk.bangtalchul.viewmodel.StoreViewModel
 import com.bnk.bangtalchul.viewmodel.ThemeViewModel
 
@@ -38,7 +39,7 @@ class HomeFragment : Fragment() {
     private var homeThemeList: ArrayList<HomeEntity> = arrayListOf()
     private var homeRegionList: ArrayList<HomeEntity> = arrayListOf()
 
-    private lateinit var recyclerAdapter2: HomeAdapter
+    private lateinit var recyclerAdapter2: HomeAdapter2
     private lateinit var recyclerAdapter3: HomeAdapter
 
     override fun onCreateView(
@@ -49,7 +50,7 @@ class HomeFragment : Fragment() {
         val recyclerView: RecyclerView = view.findViewById(R.id.mainRecyclerView)
         storeViewModel = StoreViewModel()
         homeStoreList = storeViewModel.getHomeStoreList()
-        recyclerAdapter = HomeAdapter()
+        recyclerAdapter = HomeAdapter(this.requireContext())
         recyclerAdapter.setList(homeStoreList)
 
         linearLayoutManager = LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
@@ -58,7 +59,7 @@ class HomeFragment : Fragment() {
         recyclerView.adapter = recyclerAdapter
 
         val recyclerView2: RecyclerView = view.findViewById(R.id.mainRecyclerView2)
-        recyclerAdapter2 = HomeAdapter()
+        recyclerAdapter2 = HomeAdapter2(this.requireContext())
         themeViewModel = ThemeViewModel()
         homeThemeList = themeViewModel.getHomeThemeList()
         recyclerAdapter2.setList(homeThemeList)
@@ -68,7 +69,7 @@ class HomeFragment : Fragment() {
         recyclerView2.adapter = recyclerAdapter2
 
         val recyclerView3: RecyclerView = view.findViewById(R.id.mainRecyclerView3)
-        recyclerAdapter3 = HomeAdapter()
+        recyclerAdapter3 = HomeAdapter(this.requireContext())
         homeRegionList = storeViewModel.getHomeRegionList("")
         recyclerAdapter3.setList(homeRegionList)
         linearLayoutManager = LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
@@ -87,7 +88,7 @@ class HomeFragment : Fragment() {
             }
         })
 
-        recyclerAdapter2.setItemClickListener(object: HomeAdapter.OnItemClickListener{
+        recyclerAdapter2.setItemClickListener(object: HomeAdapter2.OnItemClickListener{
             override fun onClick(v: View, position: Int) {
                 var intent = Intent(activity, StoreActivity::class.java)
                 intent.putExtra("theme_id", homeThemeList[position].id)

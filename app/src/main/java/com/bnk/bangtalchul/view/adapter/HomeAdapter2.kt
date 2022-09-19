@@ -11,7 +11,7 @@ import com.bnk.bangtalchul.R
 import com.bnk.bangtalchul.model.entity.HomeEntity
 import kotlin.collections.ArrayList
 
-class HomeAdapter(val context: Context) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
+class HomeAdapter2(val context: Context) : RecyclerView.Adapter<HomeAdapter2.ViewHolder>() {
     private var list = ArrayList<HomeEntity>()
 
     fun setList(list: ArrayList<HomeEntity>) {
@@ -20,7 +20,7 @@ class HomeAdapter(val context: Context) : RecyclerView.Adapter<HomeAdapter.ViewH
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, i: Int): ViewHolder {
-        var view = LayoutInflater.from(parent.context).inflate(R.layout.main_item, parent, false)
+        var view = LayoutInflater.from(parent.context).inflate(R.layout.main_item2, parent, false)
         return ViewHolder(view)
     }
 
@@ -48,12 +48,10 @@ class HomeAdapter(val context: Context) : RecyclerView.Adapter<HomeAdapter.ViewH
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         private val name = itemView.findViewById<TextView>(R.id.name)
-        private val address = itemView.findViewById<TextView>(R.id.address)
         private val photoUrl = itemView.findViewById<ImageView>(R.id.photo_url)
 
         fun bind(home: HomeEntity) {
             name.text = home.name
-            address.text = home.address
 
             if (home.photoUrl != "") {
                 val resourceId = context.resources.getIdentifier(home.photoUrl, "drawable", context.packageName)
