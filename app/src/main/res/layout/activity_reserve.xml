@@ -6,28 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".view.activity.ReserveActivity">
 
-    <ScrollView
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
+        android:layout_height="match_parent"
+        tools:context="com.ada.landing.MainActivity">
 
-        <RelativeLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context="com.ada.landing.MainActivity">
-
-            <CalendarView
-                android:id="@+id/calendarView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:firstDayOfWeek="2"
-                />
-
-        </RelativeLayout>
-
-    </ScrollView>
-
+        <CalendarView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendarView"
+            android:firstDayOfWeek="2"/></RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
