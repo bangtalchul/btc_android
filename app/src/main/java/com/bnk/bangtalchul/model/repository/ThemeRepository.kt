@@ -24,13 +24,13 @@ class ThemeRepository {
     )
 
     private val reserveList :ArrayList<ReserveEntity> = arrayListOf(
-        ReserveEntity(1, "책 읽어주는 남자", "20220908", "0", "0900", "1000", 0, 0)
-        , ReserveEntity(1, "책 읽어주는 남자", "20220908", "0", "1100", "1200", 0, 0)
-        , ReserveEntity(1, "책 읽어주는 남자", "20220909", "0", "0900", "1000", 0, 0)
-        , ReserveEntity(1, "책 읽어주는 남자", "20220910", "0", "0900", "1000", 0, 0)
+        ReserveEntity(2, "괴도루키", "20220908", "0", "0900", "1000", 0, 0)
+        , ReserveEntity(2, "괴도루키", "20220908", "0", "1100", "1200", 0, 0)
+        , ReserveEntity(2, "괴도루키", "20220909", "0", "0900", "1000", 0, 0)
+        , ReserveEntity(2, "괴도루키", "20220910", "0", "0900", "1000", 0, 0)
     )
 
-    private val themeInfo : ThemeEntity = ThemeEntity(1, "책 읽어주는 남자", "30", "1", "테마소개입니다", "3", 1, 0, "store1", 6)
+    private val themeInfo : ThemeEntity = ThemeEntity(2, "괴도루키", "30", "1", "테마소개입니다", "3", 1, 0, "theme2", 6)
 
     fun getHomeThemeList(): ArrayList<HomeEntity> {
         return homeThemeList

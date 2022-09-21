@@ -1,10 +1,12 @@
 package com.bnk.bangtalchul.view.activity
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.viewpager2.widget.ViewPager2
 import com.bnk.bangtalchul.R
@@ -33,6 +35,7 @@ class ThemeActivity : AppCompatActivity() {
         val limit = findViewById<TextView>(R.id.themeLimit)
         val level = findViewById<TextView>(R.id.themeLevel)
         val desc = findViewById<TextView>(R.id.themeDesc)
+        val photoUrl = findViewById<ImageView>(R.id.photo_url)
 
         val reserveBtn = findViewById<Button>(R.id.reserveBtn)
 
@@ -41,6 +44,13 @@ class ThemeActivity : AppCompatActivity() {
         limit.text = themeInfo.limit.toString() + "명"
         level.text = themeInfo.level + "단계"
         desc.text  = themeInfo.desc
+
+        if (themeInfo.photoUrl != "") {
+            val resourceId = resources.getIdentifier(themeInfo.photoUrl, "drawable", packageName)
+            photoUrl?.setImageResource(resourceId)
+        } else {
+            photoUrl?.setImageResource(R.mipmap.ic_launcher)
+        }
 
         val fireWorkUnicode = 0x1F5D2
         val emojiText = "${String(Character.toChars(fireWorkUnicode))} 예약하기"
