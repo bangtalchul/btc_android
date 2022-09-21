@@ -9,7 +9,7 @@ data class ThemeEntity (
     var level: String,
     var storeId: Int,
     var codeId: Int,
-    var phoneUrl: String,
+    var photoUrl: String,
     var limit: Int
 ) {
     constructor() : this(0, "", "", "", "", "", 0, 0, "", 0) {
@@ -21,7 +21,7 @@ data class ThemeEntity (
         this.level = level
         this.storeId = storeId
         this.codeId = codeId
-        this.phoneUrl = phoneUrl
+        this.photoUrl = photoUrl
         this.limit = limit
     }
 }
