@@ -22,16 +22,16 @@ class StoreRepository {
     )
 
     private val storeList :ArrayList<StoreEntity> = arrayListOf(
-        StoreEntity(1, "4421탈출성공", "부산광역시 부산진구", "", "", "", "", 0, "", "store1")
-        , StoreEntity(2, "INVESTIGATION", "부산광역시 동구", "", "", "", "", 0, "", "store2")
-        , StoreEntity(3, "비트포비아 서면점", "부산광역시 부산진구", "", "", "", "", 0, "", "store3")
-        , StoreEntity(4, "마스터키", "부산광역시 부산진구", "", "", "", "", 0, "", "store4")
-        , StoreEntity(5, "이스케이프", "부산광역시 해운대구", "", "", "", "", 0, "", "store5")
-        , StoreEntity(6, "THE CODE 이스케이프 룸", "부산광역시 남구", "", "", "", "", 0, "", "store6")
-        , StoreEntity(7, "룸익스케이프", "부산광역시 중구", "", "", "", "", 0, "", "store7")
+        StoreEntity(1, "4421탈출성공", "부산광역시 부산진구", "", "", "", "", 0, "", "store1", 5f)
+        , StoreEntity(2, "INVESTIGATION", "부산광역시 동구", "", "", "", "", 0, "", "store2", 4f)
+        , StoreEntity(3, "비트포비아 서면점", "부산광역시 부산진구", "", "", "", "", 0, "", "store3", 4f)
+        , StoreEntity(4, "마스터키", "부산광역시 부산진구", "", "", "", "", 0, "", "store4", 5f)
+        , StoreEntity(5, "이스케이프", "부산광역시 해운대구", "", "", "", "", 0, "", "store5", 2f)
+        , StoreEntity(6, "THE CODE 이스케이프 룸", "부산광역시 남구", "", "", "", "", 0, "", "store6", 3f)
+        , StoreEntity(7, "룸익스케이프", "부산광역시 중구", "", "", "", "", 0, "", "store7", 1f)
     )
 
-    private val storeInfo :StoreEntity = StoreEntity(1, "비밀의 화원 서면점", "부산광역시 자성로 8번길 12", "", "", "비밀의 화원 서면점입니다. 영업시간은 ~~ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ", "", 0, "", "store1")
+    private val storeInfo :StoreEntity = StoreEntity(1, "비밀의 화원 서면점", "부산광역시 자성로 8번길 12", "", "", "비밀의 화원 서면점입니다. 영업시간은 ~~ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ", "", 0, "", "store1", 5f)
 
     fun getHomeStoreList(): ArrayList<HomeEntity> {
         return homeStoreList

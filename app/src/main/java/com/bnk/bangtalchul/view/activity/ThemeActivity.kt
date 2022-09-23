@@ -4,10 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.viewpager2.widget.ViewPager2
 import com.bnk.bangtalchul.R
 import com.bnk.bangtalchul.model.entity.ThemeEntity
@@ -36,14 +33,15 @@ class ThemeActivity : AppCompatActivity() {
         val level = findViewById<TextView>(R.id.themeLevel)
         val desc = findViewById<TextView>(R.id.themeDesc)
         val photoUrl = findViewById<ImageView>(R.id.photo_url)
-
         val reserveBtn = findViewById<Button>(R.id.reserveBtn)
+        val rating = findViewById<RatingBar>(R.id.theme_rating)
 
         title.text = themeInfo.name
         time.text  = themeInfo.time + "분"
         limit.text = themeInfo.limit.toString() + "명"
         level.text = themeInfo.level + "단계"
         desc.text  = themeInfo.desc
+        rating.rating = themeInfo.rating
 
         if (themeInfo.photoUrl != "") {
             val resourceId = resources.getIdentifier(themeInfo.photoUrl, "drawable", packageName)

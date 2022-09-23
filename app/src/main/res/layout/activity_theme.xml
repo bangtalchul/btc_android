@@ -70,6 +70,19 @@
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/store4" />
 
+            <RatingBar
+                android:id="@+id/theme_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="end"
+                android:numStars="5"
+                android:rating="3"
+                android:isIndicator="true"
+                android:theme="@style/CustomRatingBar"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

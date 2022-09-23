@@ -10,9 +10,10 @@ data class ThemeEntity (
     var storeId: Int,
     var codeId: Int,
     var photoUrl: String,
-    var limit: Int
+    var limit: Int,
+    var rating: Float
 ) {
-    constructor() : this(0, "", "", "", "", "", 0, 0, "", 0) {
+    constructor() : this(0, "", "", "", "", "", 0, 0, "", 0, 0f) {
         this.storeId = storeId
         this.name = name
         this.time = time
@@ -23,5 +24,6 @@ data class ThemeEntity (
         this.codeId = codeId
         this.photoUrl = photoUrl
         this.limit = limit
+        this.rating = rating
     }
 }

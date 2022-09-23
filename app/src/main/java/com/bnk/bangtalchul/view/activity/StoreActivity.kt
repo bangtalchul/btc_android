@@ -3,6 +3,7 @@ package com.bnk.bangtalchul.view.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.RatingBar
 import android.widget.TextView
 import androidx.viewpager2.widget.ViewPager2
 import com.bnk.bangtalchul.R
@@ -28,6 +29,11 @@ class StoreActivity : AppCompatActivity() {
         val storeId = intent.getStringExtra("store_id")?.toInt()?: 0
         var storeInfo = storeViewModel.getStoreInfo(storeId)
 
+        //별점 세팅
+        val rating = findViewById<RatingBar>(R.id.store_rating)
+        rating.rating = storeInfo.rating
+
+        // 상세정보 세팅
         val title = findViewById<TextView>(R.id.title_textview)
         val address = findViewById<TextView>(R.id.storeAddress)
         val desc = findViewById<TextView>(R.id.storeDesc)
@@ -40,6 +46,7 @@ class StoreActivity : AppCompatActivity() {
         title.text = storeInfo.name
         address.text = storeInfo.address
         desc.text = storeInfo.desc
+
 
         val recyclerView: ViewPager2 = findViewById(R.id.image_viewpager)
 

@@ -68,6 +68,20 @@
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/store3" />
 
+            <RatingBar
+                android:id="@+id/store_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:rating="3"
+                android:isIndicator="true"
+                android:theme="@style/CustomRatingBar"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -86,14 +100,14 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/bold"
                         android:layout_marginRight="20dp"
-                        android:textSize="15dp"
+                        android:textSize="20dp"
                         android:text="가게 주소"/>
 
                     <TextView
                         android:id="@+id/storeAddress"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="15dp"
+                        android:textSize="20dp"
                         android:text="부산광역시 해운대"/>
                 </LinearLayout>
 
@@ -109,14 +123,14 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/bold"
                         android:layout_marginRight="20dp"
-                        android:textSize="15dp"
+                        android:textSize="20dp"
                         android:text="영업 시간"/>
 
                     <TextView
                         android:id="@+id/store_time"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="15dp"
+                        android:textSize="20dp"
                         android:text="10:00 ~ 21:00"/>
                 </LinearLayout>
 
@@ -133,14 +147,14 @@
                         android:fontFamily="@font/bold"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="10dp"
-                        android:textSize="15dp"
+                        android:textSize="20dp"
                         android:text="가게 소개"/>
 
                     <TextView
                         android:id="@+id/storeDesc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="15dp"
+                        android:textSize="20dp"
                         android:text="소개소개"/>
                 </LinearLayout>
 

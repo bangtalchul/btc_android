@@ -10,9 +10,10 @@ data class StoreEntity (
     var createTime: String,
     var userId: Int,
     var editTime: String,
-    var photoUrl: String
+    var photoUrl: String,
+    var rating: Float
 ) {
-    constructor() : this(0, "", "", "", "", "", "", 0, "", "") {
+    constructor() : this(0, "", "", "", "", "", "", 0, "", "", 0f) {
         this.storeId = storeId
         this.name = name
         this.address = address
@@ -23,5 +24,6 @@ data class StoreEntity (
         this.userId = userId
         this.editTime = editTime
         this.photoUrl = photoUrl
+        this.rating = rating
     }
 }
