@@ -5,6 +5,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -39,17 +40,25 @@ class ThemeAdapter(activity: Activity) : RecyclerView.Adapter<ThemeAdapter.ViewH
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         private val theme_name = itemView.findViewById<TextView>(R.id.theme_name)
         // private val address = itemView.findViewById<TextView>(R.id.address)
-        // private val photoUrl = itemView.findViewById<ImageView>(R.id.photo_url)
+        private val photoUrl = itemView.findViewById<ImageView>(R.id.slide_imageview)
 
         fun bind(theme: ThemeEntity) {
             theme_name.text = theme.name
-            // address.text = home.address
+            val resource = activity.resources.getIdentifier("theme" + theme.themeId,
+                "drawable",
+                activity.packageName)
+
+            if(resource != null){
+                photoUrl.setImageResource(resource)
+            }
+
 
             itemView.setOnClickListener {
                 var intent = Intent(activity, ThemeActivity::class.java)
                 intent.putExtra("theme_id", theme.themeId)
                 activity.startActivity(intent)
             }
+
 
 //            itemView.setOnLongClickListener {
 //                homeItemLongClick(home)

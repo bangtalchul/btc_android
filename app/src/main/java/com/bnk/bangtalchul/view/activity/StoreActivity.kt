@@ -5,12 +5,14 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.RatingBar
 import android.widget.TextView
+import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.bnk.bangtalchul.R
 import com.bnk.bangtalchul.model.repository.ThemeRepository
 import com.bnk.bangtalchul.view.adapter.ThemeAdapter
 import com.bnk.bangtalchul.viewmodel.StoreViewModel
 import com.bnk.bangtalchul.viewmodel.ThemeViewModel
+import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
 
 class StoreActivity : AppCompatActivity() {
 
@@ -26,7 +28,7 @@ class StoreActivity : AppCompatActivity() {
         storeViewModel = StoreViewModel()
         themeViewModel = ThemeViewModel()
 
-        val storeId = intent.getStringExtra("store_id")?.toInt()?: 0
+        val storeId = intent.getIntExtra("store_id", 0)
         var storeInfo = storeViewModel.getStoreInfo(storeId)
 
         //별점 세팅
@@ -53,6 +55,7 @@ class StoreActivity : AppCompatActivity() {
         val recyclerView: ViewPager2 = findViewById(R.id.image_viewpager)
 
         /* 여백, 너비에 대한 정의 */
+        /*
         val pageMarginPx = resources.getDimensionPixelOffset(R.dimen.page_margin)
         val pagerWidth = resources.getDimensionPixelOffset(R.dimen.page_width)
         val screenWidth = resources.displayMetrics.widthPixels
@@ -61,6 +64,7 @@ class StoreActivity : AppCompatActivity() {
         recyclerView.setPageTransformer { page, position ->
             page.translationX = position * -offsetPx
         }
+        */
 
         recyclerView.offscreenPageLimit = 1
 
@@ -69,5 +73,8 @@ class StoreActivity : AppCompatActivity() {
         recyclerAdapter.setList(themeViewModel.getThemeList(storeId))
 
         recyclerView.adapter = recyclerAdapter
+
+        val wormDotsIndicator = findViewById<WormDotsIndicator>(R.id.worm_dots_indicator)
+        wormDotsIndicator.attachTo(recyclerView)
     }
 }
