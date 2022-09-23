@@ -32,6 +32,11 @@ class MyPageFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_mypage, container, false) //데이터바인딩
         binding.viewModel = viewModel //data binding을 위해 viewModel 세팅
         binding.lifecycleOwner = this
+
+        val fireWorkUnicode = 0x1F527
+        val emojiText = "${String(Character.toChars(fireWorkUnicode))} 수정하기"
+        binding.mypageEditButton.text = emojiText
+
         initObserve()
         return binding.root
     }

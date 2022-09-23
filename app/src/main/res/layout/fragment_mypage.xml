@@ -160,7 +160,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginBottom="@dimen/mypage_bottom_margin"
-                        android:background="@color/main_yellow"/>
+                        android:background="@color/bright_gray"/>
 
                     <TextView
                         android:id="@+id/written_text"
@@ -184,7 +184,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginBottom="@dimen/mypage_bottom_margin"
-                        android:background="@color/main_yellow"/>
+                        android:background="@color/bright_gray"/>
 
                     <TextView
                         android:id="@+id/reservation_text"
@@ -208,7 +208,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginBottom="@dimen/mypage_bottom_margin"
-                        android:background="@color/main_yellow"/>
+                        android:background="@color/bright_gray"/>
 
                     <TextView
                         android:id="@+id/usage_text"
@@ -232,7 +232,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginBottom="@dimen/mypage_bottom_margin"
-                        android:background="@color/main_yellow"/>
+                        android:background="@color/bright_gray"/>
 
                     <TextView
                         android:id="@+id/collection_text"
@@ -241,7 +241,8 @@
                         android:layout_marginLeft="@dimen/mypage_left_margin"
                         android:layout_marginRight="@dimen/mypage_right_margin"
                         android:text="@string/my_collection"
-                        android:onClick="@{() -> viewModel.goPage(4)}"/>/>
+                        android:onClick="@{() -> viewModel.goPage(4)}"/>
+
                 </LinearLayout>
 
 
