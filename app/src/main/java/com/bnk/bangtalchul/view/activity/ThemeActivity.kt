@@ -35,6 +35,7 @@ class ThemeActivity : AppCompatActivity() {
         val photoUrl = findViewById<ImageView>(R.id.photo_url)
         val reserveBtn = findViewById<Button>(R.id.reserveBtn)
         val rating = findViewById<RatingBar>(R.id.theme_rating)
+        val ratingText = findViewById<TextView>(R.id.theme_rating_text)
 
         title.text = themeInfo.name
         time.text  = themeInfo.time + "분"
@@ -42,6 +43,7 @@ class ThemeActivity : AppCompatActivity() {
         level.text = themeInfo.level + "단계"
         desc.text  = themeInfo.desc
         rating.rating = themeInfo.rating
+        ratingText.text = themeInfo.rating.toString()
 
         if (themeInfo.photoUrl != "") {
             val resourceId = resources.getIdentifier(themeInfo.photoUrl, "drawable", packageName)

@@ -68,19 +68,34 @@
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/store3" />
 
-            <RatingBar
-                android:id="@+id/store_rating"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
                 android:layout_gravity="center"
-                android:numStars="5"
-                android:rating="3"
-                android:isIndicator="true"
-                android:theme="@style/CustomRatingBar"
-                style="@style/Widget.AppCompat.RatingBar.Indicator"/>
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <RatingBar
+                    android:id="@+id/store_rating"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:theme="@style/CustomRatingBar" />
+
+                <TextView
+                    android:id="@+id/store_rating_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="20dp"
+                    android:text="3.0"/>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

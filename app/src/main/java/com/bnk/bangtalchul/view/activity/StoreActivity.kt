@@ -31,7 +31,9 @@ class StoreActivity : AppCompatActivity() {
 
         //별점 세팅
         val rating = findViewById<RatingBar>(R.id.store_rating)
+        var ratingText = findViewById<TextView>(R.id.store_rating_text)
         rating.rating = storeInfo.rating
+        ratingText.text= storeInfo.rating.toString()
 
         // 상세정보 세팅
         val title = findViewById<TextView>(R.id.title_textview)
