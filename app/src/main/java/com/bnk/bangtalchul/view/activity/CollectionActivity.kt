@@ -30,15 +30,15 @@ class CollectionActivity : AppCompatActivity() {
         countText.text = "총 " + count + "번 참여 하셨군요!!"
         when{
             count < 10 -> {
-                levelText.text = "Level 1단계 입니다!!"
+                levelText.text = "공포 테마 방린이 입니다!!"
                 levelImg.setImageResource(R.drawable.level1_sprout)
             }
             count < 50 -> {
-                levelText.text = "Level 2단계 입니다!!"
+                levelText.text = "공포 테마 마니아 입니다!!"
                 levelImg.setImageResource(R.drawable.level2_tree)
             }
             else -> {
-                levelText.text = "Level 3단계 입니다!!"
+                levelText.text = "공포 테마 마스터 입니다!!"
                 levelImg.setImageResource(R.drawable.level3_tree)
             }
         }
