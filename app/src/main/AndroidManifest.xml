@@ -10,9 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bangtalchul">
         <activity
-            android:name=".view.activity.CollectionActivity"
-            android:exported="false" />
-        <activity android:name=".view.activity.MyPageEditActivity" />
+            android:name=".view.activity.MyPageEditActivity"/>
+
         <activity
             android:name=".view.activity.ReserveActivity"
             android:exported="false" />
@@ -43,7 +42,7 @@
         </activity>
         <activity
             android:name=".view.activity.LoginActivity"
-            android:exported="true" />
+            android:exported="true"></activity>
     </application>
 
 </manifest>

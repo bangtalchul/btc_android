@@ -28,15 +28,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        auth = FirebaseAuth.getInstance()
-//        if (auth?.currentUser == null) {
-//            val intent = Intent(this, LoginActivity::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
-//        else {
-            supportFragmentManager.beginTransaction().add(fl.id, HomeFragment()).addToBackStack(null).commit()
-//        }
+        auth = FirebaseAuth.getInstance()
+        if (auth?.currentUser == null) {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        else {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+            // supportFragmentManager.beginTransaction().add(fl.id, HomeFragment()).addToBackStack(null).commit()
+        }
 
     }
 

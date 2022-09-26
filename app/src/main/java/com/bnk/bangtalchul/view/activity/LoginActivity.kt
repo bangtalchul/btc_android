@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
+import android.widget.TextView
 import android.widget.Toast
 import com.bnk.bangtalchul.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -35,6 +37,20 @@ class LoginActivity : AppCompatActivity() {
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
         var googleSignInBtn = findViewById<SignInButton>(R.id.google_login_button)
+
+        var i = 0
+        while (i < googleSignInBtn.childCount){
+            var v = googleSignInBtn.getChildAt(i)
+            if (v is TextView) {
+                var tv = v
+                tv.setText("구글 로그인")
+                tv.setGravity(Gravity.CENTER)
+                return
+            }
+            i++
+
+        }
+
         googleSignInBtn.setOnClickListener {
             signIn()
         }
