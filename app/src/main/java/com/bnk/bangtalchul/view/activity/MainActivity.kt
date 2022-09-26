@@ -35,10 +35,7 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
         else {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
-            // supportFragmentManager.beginTransaction().add(fl.id, HomeFragment()).addToBackStack(null).commit()
+            supportFragmentManager.beginTransaction().add(fl.id, HomeFragment()).addToBackStack(null).commit()
         }
 
     }
