@@ -5,7 +5,7 @@ import com.bnk.bangtalchul.util.Event
 
 //https://developer.android.com/topic/libraries/data-binding/expressions
 class UserInfoRepository {
-    var user = UserInfoEntity(0, "박상혁", "박상혁1!", 44)
+    var user = UserInfoEntity(0, "박상혁", "상상쓰", 100)
 
     fun updateUser(nickName: String) {
         user.nickname = nickName
