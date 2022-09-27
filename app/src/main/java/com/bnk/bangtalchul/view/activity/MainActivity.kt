@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
 import android.widget.FrameLayout
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.bnk.bangtalchul.R
@@ -30,7 +29,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         auth = FirebaseAuth.getInstance()
         if (auth?.currentUser == null) {
-            val intent = Intent(this, LoginActivity::class.java)
+//            val intent = Intent(this, LoginActivity::class.java)
+//            startActivity(intent)
+            val intent = Intent(this, RadioButtonTestActivity::class.java)
             startActivity(intent)
             finish()
         }
