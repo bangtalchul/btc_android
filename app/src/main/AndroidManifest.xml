@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bnk.bangtalchul">
+    package="com.bnk.bangtalchul" >
 
     <application
         android:allowBackup="true"
@@ -8,10 +8,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Bangtalchul">
+        android:theme="@style/Theme.Bangtalchul" >
         <activity
-            android:name=".view.activity.MyPageEditActivity"/>
-
+            android:name=".view.activity.RadioButtonTestActivity"
+            android:exported="false" />
+        <activity android:name=".view.activity.MyPageEditActivity" />
         <activity
             android:name=".view.activity.ReserveActivity"
             android:exported="false" />
@@ -32,7 +33,7 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".view.activity.MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -42,7 +43,7 @@
         </activity>
         <activity
             android:name=".view.activity.LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
