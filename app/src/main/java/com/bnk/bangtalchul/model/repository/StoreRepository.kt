@@ -31,7 +31,7 @@ class StoreRepository {
         , StoreEntity(7, "룸익스케이프", "부산광역시 중구", "", "", "", "", 0, "", "store7", 1f)
     )
 
-    private val storeInfo :StoreEntity = StoreEntity(1, "비밀의 화원 서면점", "부산광역시 자성로 8번길 12", "", "", "안녕하세요! 비밀의 화원 서면점입니다. 오늘 하루도 최고의 서비스로 모시겠습니다!", "", 0, "", "store1", 5f)
+    private val storeInfo :StoreEntity = StoreEntity(1, "부산이스케이프룸", "부산광역시 부산진구 183-1 쥬디스태화 신관 3층", "", "", "안녕하세요! 이스케이프서면점입니다. 오늘 하루도 최고의 서비스로 모시겠습니다!", "", 0, "", "store1", 5f)
 
     fun getHomeStoreList(): ArrayList<HomeEntity> {
         return homeStoreList

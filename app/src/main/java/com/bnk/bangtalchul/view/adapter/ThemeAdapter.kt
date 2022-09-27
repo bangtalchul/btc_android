@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RatingBar
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -41,10 +42,12 @@ class ThemeAdapter(activity: Activity) : RecyclerView.Adapter<ThemeAdapter.ViewH
         private val theme_name = itemView.findViewById<TextView>(R.id.theme_name)
         // private val address = itemView.findViewById<TextView>(R.id.address)
         private val photoUrl = itemView.findViewById<ImageView>(R.id.slide_imageview)
+        private val ratingStar = itemView.findViewById<RatingBar>(R.id.rating_star)
 
         fun bind(theme: ThemeEntity) {
             theme_name.text = theme.name
-            val resource = activity.resources.getIdentifier("theme" + theme.themeId,
+            ratingStar.rating = theme.rating
+            val resource = activity.resources.getIdentifier(theme.photoUrl,
                 "drawable",
                 activity.packageName)
 
