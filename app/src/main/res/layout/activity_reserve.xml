@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -22,6 +23,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/bright_gray"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -51,6 +58,12 @@
 
         </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/bright_gray"/>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,6 +72,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:textColor="@color/black"
@@ -72,7 +86,10 @@
                 <Button
                     android:layout_width="45dp"
                     android:layout_height="wrap_content"
-                    android:text="-"/>
+                    android:background="@drawable/button_circle"
+
+                    android:text="-"
+                    android:textColor="@color/white" />
 
                 <TextView
                     android:layout_marginLeft="20dp"
@@ -80,31 +97,44 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:text="0"/>
+                    android:text="4"/>
 
                 <Button
                     android:layout_width="45dp"
                     android:layout_height="wrap_content"
-                    android:text="+"/>
+                    android:background="@drawable/button_circle"
+                    android:backgroundTint="@color/white"
+                    android:text="+"
+                    android:textColor="@color/white" />
             </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:id="@+id/result"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/reserve"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/bright_gray"/>
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="20dp"
+            android:fontFamily="@font/bold"
             android:text="비밀의화원 서면점에서 무고 테마를" />
 
         <TextView
@@ -112,18 +142,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="9월 28일 13시 정각으로" />
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/bold"
+            android:text="9월 28일 13시 정각으로 예약하시겠습니까?" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/reserveBtn2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Button"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result" />
+        app:layout_constraintTop_toBottomOf="@+id/result">
+
+        <Button
+            android:id="@+id/reserveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="예약 하기"
+            android:textSize="20dp"
+            android:background="@drawable/radius"
+            />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

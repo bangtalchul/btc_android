@@ -8,12 +8,14 @@ import android.widget.LinearLayout
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.appcompat.widget.AppCompatRadioButton
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.bnk.bangtalchul.R
 import com.bnk.bangtalchul.view.adapter.AdapterMonth
 import com.bnk.bangtalchul.viewmodel.ThemeViewModel
+import java.security.AccessController.getContext
 
 class ReserveActivity : AppCompatActivity() {
 
@@ -52,16 +54,18 @@ class ReserveActivity : AppCompatActivity() {
         for (i in 1..buttons) {
             val rbn = RadioButton(this)
             rbn.id = View.generateViewId()
-            rbn.text = "   0$i : 00   "
+            rbn.text = "   1$i : 00   "
             val params =
                 LinearLayout.LayoutParams(RadioGroup.LayoutParams.WRAP_CONTENT, RadioGroup.LayoutParams.WRAP_CONTENT, 1f)
             params.setMargins(15, 0, 15, 0)
             rbn.layoutParams = params
             rbn.setPadding(40,30,40,30)
             rbn.setBackgroundResource(R.drawable.selector_radio_button)
-            rbn.setTextColor(R.drawable.selector_radio_text)
+            //rbn.setTextColor(R.drawable.selector_radio_text)
+            rbn.setTextColor(ContextCompat.getColorStateList(this, R.color.selector_radio_text));
             rbn.setTextSize(1, 18f)
             rbn.setButtonDrawable(0)
+
             rgp.addView(rbn)
         }
     }
