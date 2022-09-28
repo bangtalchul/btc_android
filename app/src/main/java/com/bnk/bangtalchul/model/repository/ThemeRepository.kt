@@ -8,7 +8,7 @@ import com.bnk.bangtalchul.model.entity.ThemeEntity
 class ThemeRepository {
 
     private val homeThemeList :ArrayList<HomeEntity> = arrayListOf(
-        HomeEntity(1, "저주받은 집", "부산광역시", "theme1", 3)
+        HomeEntity(1, "주차장", "부산광역시", "theme10", 3)
         , HomeEntity(2, "괴도루키", "부산광역시", "theme2", 3)
         , HomeEntity(3, "반고흐의 방", "부산광역시", "theme3", 5)
         , HomeEntity(4, "스토커", "부산광역시", "theme4", 2)
