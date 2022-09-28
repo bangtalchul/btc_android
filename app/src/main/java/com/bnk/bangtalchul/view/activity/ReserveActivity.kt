@@ -59,7 +59,7 @@ class ReserveActivity : AppCompatActivity() {
             rbn.layoutParams = params
             rbn.setPadding(40,30,40,30)
             rbn.setBackgroundResource(R.drawable.selector_radio_button)
-            rbn.setTextColor(Color.BLACK)
+            rbn.setTextColor(R.drawable.selector_radio_text)
             rbn.setTextSize(1, 18f)
             rbn.setButtonDrawable(0)
             rgp.addView(rbn)
