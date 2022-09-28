@@ -28,16 +28,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         auth = FirebaseAuth.getInstance()
-        if (auth?.currentUser == null) {
-//            val intent = Intent(this, LoginActivity::class.java)
+//        if (auth?.currentUser == null) {
+////            val intent = Intent(this, LoginActivity::class.java)
+////            startActivity(intent)
+//            val intent = Intent(this, ReserveActivity::class.java)
 //            startActivity(intent)
-            val intent = Intent(this, ReserveActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-        else {
+//            finish()
+//        }
+//        else {
             supportFragmentManager.beginTransaction().add(fl.id, HomeFragment()).addToBackStack(null).commit()
-        }
+//        }
 
     }
 
