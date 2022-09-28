@@ -6,11 +6,11 @@ import com.bnk.bangtalchul.model.entity.StoreEntity
 class StoreRepository {
 
     private val homeStoreList :ArrayList<HomeEntity> = arrayListOf(
-        HomeEntity(1, "4421탈출성공", "부산광역시 부산진구", "store1", 0)
+        HomeEntity(5, "서울이스케이프룸", "부산광역시 부사진구", "store9", 0)
+        , HomeEntity(1, "4421탈출성공", "부산광역시 부산진구", "store1", 0)
         , HomeEntity(2, "INVESTIGATION", "부산광역시 동구", "store2", 0)
         , HomeEntity(3, "비트포비아 서면점", "부산광역시 부산진구", "store3", 0)
         , HomeEntity(4, "마스터키", "부산광역시 부산진구", "store4", 0)
-        , HomeEntity(5, "이스케이프", "부산광역시 해운대구", "store5", 0)
     )
 
     private val homeRegionList :ArrayList<HomeEntity> = arrayListOf(
