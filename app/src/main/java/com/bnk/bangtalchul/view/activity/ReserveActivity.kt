@@ -52,7 +52,7 @@ class ReserveActivity : AppCompatActivity() {
         for (i in 1..buttons) {
             val rbn = RadioButton(this)
             rbn.id = View.generateViewId()
-            rbn.text = "0$i : 00"
+            rbn.text = "   0$i : 00   "
             val params =
                 LinearLayout.LayoutParams(RadioGroup.LayoutParams.WRAP_CONTENT, RadioGroup.LayoutParams.WRAP_CONTENT, 1f)
             params.setMargins(15, 0, 15, 0)

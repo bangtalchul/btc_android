@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         if (auth?.currentUser == null) {
 //            val intent = Intent(this, LoginActivity::class.java)
 //            startActivity(intent)
-            val intent = Intent(this, RadioButtonTestActivity::class.java)
+            val intent = Intent(this, ReserveActivity::class.java)
             startActivity(intent)
             finish()
         }

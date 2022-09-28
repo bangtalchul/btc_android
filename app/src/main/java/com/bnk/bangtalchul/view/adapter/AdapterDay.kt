@@ -24,21 +24,23 @@ class AdapterDay(val tempMonth:Int, val dayList: MutableList<Date>): RecyclerVie
     }
 
     override fun onBindViewHolder(holder: DayView, position: Int) {
-        holder.layout.findViewById<LinearLayout>(R.id.item_day_layout).setOnClickListener {
+        val day = holder.layout.findViewById<LinearLayout>(R.id.item_day_layout)
+        val dayText = holder.layout.findViewById<TextView>(R.id.item_day_text)
+        day.setOnClickListener {
             Toast.makeText(holder.layout.context, "${dayList[position]}", Toast.LENGTH_SHORT).show()
-            holder.layout.findViewById<LinearLayout>(R.id.item_day_layout).setBackgroundResource(R.drawable.circle_layout)
-            holder.layout.findViewById<TextView>(R.id.item_day_text).setTextColor(Color.WHITE)
+            day.setBackgroundResource(R.drawable.circle_layout)
+            dayText.setTextColor(Color.WHITE)
         }
-        holder.layout.findViewById<TextView>(R.id.item_day_text).text = dayList[position].date.toString()
+        dayText.text = dayList[position].date.toString()
 
-        holder.layout.findViewById<TextView>(R.id.item_day_text).setTextColor(when(position % 7) {
+        dayText.setTextColor(when(position % 7) {
             0 -> Color.RED
             6 -> Color.BLUE
-            else -> Color.BLACK
+            else -> Color.GRAY
         })
 
         if(tempMonth != dayList[position].month - 1) {
-            holder.layout.findViewById<TextView>(R.id.item_day_text).alpha = 0.4f
+            dayText.alpha = 0.4f
         }
     }
 
